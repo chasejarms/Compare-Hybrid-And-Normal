@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href="hybrid-vs-normal.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>"To hybrid or to not hybrid, that is the question"</h1>
+        <p class="william-shakespeare">-William Shakespeare(maybe)</p>
+    </div>
+    <div id="main-content">
+        <div id="entry-container">
+            <div class="differences-container">
+                <label for="initial-cost">Initial Cost:</label>
+                <input type="number" name="initial-cost" id="first-cost-input">
+                <input type="number" name="initial-cost" id="second-cost-input">
+                <br>
+                <label for="miles-per-gallon">Estimated MPG:</label>
+                <input type="number" name="miles-per-gallon" id="first-miles-input">
+                <input type="number" name="miles-per-gallon" id="second-miles-input">
+            </div>
+
+            <div class="similar-container">
+                <label for="yearly-mileage">Estimated Yearly Mileage:</label>
+                <input type="number" name="yearly-mileage" id="only-mileage-input">
+            </div>
+            <div class="similar-container">
+                <label for="price-per-gallon">Price Per Gallon:</label>
+                <input type="number" name="price-per-gallon" id="only-price-per-gallon-input">
+            </div>
+            <div class="similar-container">
+                <label for="resell-value">Retained Value After 5 Years:</label>
+                <select name="resell-value" id="only-resell-value-input">
+                    <option>50</option>
+                    <option>55</option>
+                    <option>60</option>
+                    <option>65</option>
+                    <option>70</option>
+                    <option>75</option>
+                    <option>80</option>
+                    <option>85</option>
+                    <option>90</option>
+                    <option>95</option>
+                    <option>100</option>
+                </select>
+                %
+            </div>
+            <div class="preference-container">
+                <label for="output-suggestion">Priority(Select One):</label>
+                <input id="gas" type="radio" name="output-suggestion" value="gas-consumption">Gas Consumption
+                <input id="cost" type="radio" name="output-suggestion" value"total-cost">Total Cost
+            </div>
+        </div>
+        <div class="submit-entry">
+            <button onclick="validate(output())">Click Here to See Car Suggestion Below</button>
+        </div>
+        <div id="suggestion-container">
+            <div id="hybrid-output-container">
+                <h2>Hybrid</h2>
+                    <p>Total Cost: <span id="h-cost-output"></span></p>
+                    <p>Gas Consumption: <span id="h-gas-consumption"></span></p>
+            </div>
+            <div id="normal-output-container">
+                <h2>Normal</h2>
+                    <p>Total Cost: <span id="n-cost-output"></span></p>
+                    <p>Gas Consumption: <span id="n-gas-consumption"></span></p>
+            </div>
+            <h2 id="suggestion"></h2>
+        </div>
+    </div>
+</body>
+<script src="hybrid-vs-normal.js" type="text/javascript" ></script>
+</html>
